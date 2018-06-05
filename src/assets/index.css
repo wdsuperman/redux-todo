@@ -1,0 +1,10 @@
+body{
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+*{
+  box-sizing: border-box;
+  
+}
