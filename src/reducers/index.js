@@ -25,13 +25,23 @@ const rootReducer = (state = initialState, action) => {
 
     case 'COMPLETE':
     const complete = state.map(t => {
-      if(t.id === action.id){
+      if(t.id === action.id && t.complete === false){
         t.complete = true
+      }else{
+        t.complete = false
       }
       return t
     })
     return complete
     
+    case 'COMPLETED':
+    const completed = state.filter(c => c.complete === true)
+    return completed
+
+    case 'ACTIVE':
+    const active = state.filter(c => c.complete === false)
+    return active
+
     default:
       return state
   }

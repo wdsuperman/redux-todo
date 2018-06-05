@@ -26,6 +26,7 @@ class Todo extends Component {
           </h1>
           <div>
             <input onChange={this.TodoChange} value={this.state.text} type="text" placeholder="What needs to be done?"/>
+            {/* <input keypress={this.addTodo} onChange={this.TodoChange} value={this.state.text} type="text" placeholder="What needs to be done?"/> */}
             <button onClick={this.addTodo}>ADD</button>
           </div>
         </Wrapper>
